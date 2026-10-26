@@ -13,8 +13,6 @@ KaniDojo is a solo beta project made because I was tired of subscriptions. It is
 
 The name comes from kanji feeling like a crab biting my behind sometimes.
 
-The original no-audio single-file build was about 4 MB. v2 is 39.7 MB because it includes 8,155 bundled reading clips.
-
 ## First run
 
 - Leave the pace on **Standard** for normal study. **Demo pace** is only for quickly testing and burning items.
