@@ -56,6 +56,19 @@ The standalone file contains the app and all audio in one HTML file. The Windows
 
 Example sentence audio is intentionally not included. The sentence text, furigana, translation, and Tatoeba link remain.
 
+## Screenshots
+
+<table>
+<tr>
+<td><img src="screenshots/welcome.webp" width="420" alt="KaniDojo welcome and pace selection"><br><sub>First run</sub></td>
+<td><img src="screenshots/dashboard-card.webp" width="420" alt="KaniDojo dashboard with reviews and SRS garden"><br><sub>Dashboard</sub></td>
+</tr>
+<tr>
+<td><img src="screenshots/lessons.webp" width="420" alt="KaniDojo lesson list"><br><sub>Lessons</sub></td>
+<td><img src="screenshots/extra-study.webp" width="420" alt="KaniDojo extra study modes"><br><sub>Extra study</sub></td>
+</tr>
+</table>
+
 ## Run
 
 - **Windows:** run the installer, or extract the portable ZIP and launch `KaniDojo.exe`.
