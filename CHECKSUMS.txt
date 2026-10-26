@@ -1,0 +1,8 @@
+dc1886a9fb082b19a6da00f52577611b73adcf944203bc722d6c0d759a374fd5  standalone/KaniDojo-v2.html
+dc1886a9fb082b19a6da00f52577611b73adcf944203bc722d6c0d759a374fd5  docs/KaniDojo-v2.html
+bf524e75df18c3917d280c629da24915dd4ba9ea21b7583cf0ab45985ca2ad57  windows/KaniDojo-Setup-2.0.0.exe
+86517942de1b7e2a7ee841aa3dc1110a3cff85f0e9689e40e3ff811626abdd18  windows/KaniDojo-2.0.0-win-x64-portable.zip
+0954802e1df896709b6d520a05b62c6fd86133456717c48da111ca54de959c8e  linux/KaniDojo-2.0.0-linux-x64.run
+1d7a7e11f85a41f21d2ae29cc8e0c2aa94cef546bcbadb267a45f37e19efd9c5  linux/KaniDojo-2.0.0-linux-x64.tar.gz
+bb0988f3d97b84678d4ced3df365ca6e5222080c0e90c253584ecf272af69af3  app/index.html
+dedd2c9c268322873007a26679411bec5ee30d5689c0abc49fb45a7a399dd536  audio/index.json

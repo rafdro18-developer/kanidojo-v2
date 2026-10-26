@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KaniDojo</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{display:grid;place-items:center;background:radial-gradient(700px 460px at 10% 0%,rgba(216,201,255,.8),transparent 60%),radial-gradient(500px 420px at 100% 100%,rgba(255,213,231,.7),transparent 60%),#fbf9ff;color:#211a38;font:16px/1.4 "Segoe UI",Arial,sans-serif}
+.card{display:flex;align-items:center;gap:18px;width:100%;padding:34px 38px}
+.mark{display:grid;place-items:center;width:72px;height:72px;flex:0 0 auto;border-radius:20px;background:linear-gradient(135deg,#8c6bff,#5b34f3 58%,#ff4f8b);box-shadow:0 20px 42px -20px rgba(109,74,255,.85);color:#fff;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:42px;font-weight:700;line-height:1}
+h1{margin:0;font-size:30px;letter-spacing:-.045em;line-height:1}
+p{margin:7px 0 0;color:#716a84;font-size:14px}
+.bar{width:240px;height:5px;margin-top:18px;overflow:hidden;border-radius:999px;background:#e7e0f5}
+.bar i{display:block;width:40%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#6d4aff,#ff4f8b);animation:load 1.1s ease-in-out infinite}
+@keyframes load{0%{transform:translateX(-110%)}100%{transform:translateX(360%)}}
+@media(prefers-reduced-motion:reduce){.bar i{animation:none;width:70%}}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="mark">力</div>
+  <div>
+    <h1>KaniDojo</h1>
+    <p>Waking the dojo...</p>
+    <div class="bar" aria-hidden="true"><i></i></div>
+  </div>
+</main>
+</body>
+</html>

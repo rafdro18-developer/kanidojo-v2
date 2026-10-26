@@ -1,0 +1,56 @@
+{
+  "name": "kanidojo-v2",
+  "version": "2.0.0",
+  "description": "KaniDojo v2 - offline Japanese SRS with bundled reading audio",
+  "productName": "KaniDojo",
+  "main": "electron-main.cjs",
+  "author": "KaniDojo",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis",
+    "dist:linux": "electron-builder --linux tar.gz",
+    "dist:linux:appimage": "electron-builder --linux AppImage"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.kanidojo.v2",
+    "productName": "KaniDojo",
+    "asar": false,
+    "compression": "normal",
+    "directories": {
+      "output": "dist",
+      "buildResources": "electron/assets"
+    },
+    "files": [
+      "electron-main.cjs",
+      "app/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "electron/assets/icon.ico",
+      "artifactName": "KaniDojo-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "KaniDojo"
+    },
+    "linux": {
+      "target": [
+        "tar.gz"
+      ],
+      "icon": "electron/assets/icon.png",
+      "category": "Education",
+      "executableName": "kanidojo",
+      "artifactName": "KaniDojo-${version}-linux-${arch}.${ext}"
+    }
+  }
+}

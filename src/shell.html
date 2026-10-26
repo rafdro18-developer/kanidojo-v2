@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#6d4aff">
+<link rel="icon" type="image/svg+xml" sizes="any" href="__FAVICON__">
+<link rel="shortcut icon" href="__FAVICON__">
+<script>
+try {
+  const saved = JSON.parse(localStorage.getItem("kanidojo_state_v1") || "null");
+  if (saved && saved.settings && saved.settings.theme === "dark") document.documentElement.dataset.theme = "dark";
+} catch (error) {}
+</script>
+<meta name="description" content="KaniDojo v2 is an offline Japanese SRS with bundled audio for every kanji and vocabulary reading, 60-level and JLPT study orders, and local progress.">
+<title>KaniDojo v2 - Offline Japanese SRS</title>
+<style>
+__CSS__
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="topbar-inner wrap">
+      <button type="button" class="brand" data-action="navigate" data-view="dashboard" aria-label="KaniDojo dashboard">
+        <span class="brand-mark">力</span>
+        <span class="brand-text"><strong>KaniDojo</strong><span>Offline Japanese SRS</span></span>
+      </button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button type="button" class="nav-link" data-action="navigate" data-view="dashboard" data-nav="dashboard">Dashboard</button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="lessons" data-nav="lessons">Lessons <span class="nav-badge" id="navLessonsBadge"></span></button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="reviews" data-nav="reviews">Reviews <span class="nav-badge" id="navReviewsBadge"></span></button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="study" data-nav="study"><span class="nav-label-full">Extra study</span><span class="nav-label-short">Study</span></button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="kanji" data-nav="browse">Browse</button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="instructions" data-nav="instructions"><span class="nav-label-full">Instructions</span><span class="nav-label-short">Guide</span></button>
+        <button type="button" class="nav-link" data-action="navigate" data-view="settings" data-nav="settings">Settings</button>
+      </nav>
+      <div class="topbar-meta">
+        <span class="pill pill-level"><span id="levelPillLabel">LV</span><strong id="levelPill">1</strong></span>
+        <span class="pill"><span>Streak</span><strong id="streakPill">0</strong></span>
+      </div>
+    </div>
+  </header>
+  <main class="main wrap" id="main"></main>
+  <footer class="footer wrap">
+    <strong>KaniDojo v2</strong>
+    <span>Progress is saved locally. Curriculum: OpenJLPT (CC BY-SA 4.0). Examples: Tatoeba (CC BY 2.0 FR). Reading audio: Deepgram Aura-2 Izanami.</span>
+    <button type="button" data-action="navigate" data-view="settings">Data &amp; settings</button>
+  </footer>
+</div>
+<div id="modalRoot"></div>
+<div class="toast-root" id="toastRoot" aria-live="polite"></div>
+<noscript><div class="wrap" style="padding:30px"><strong>KaniDojo needs JavaScript to run.</strong></div></noscript>
+<script>
+(function () {
+"use strict";
+__DATA__
+__AUDIO__
+__MAIN__
+})();
+</script>
+</body>
+</html>

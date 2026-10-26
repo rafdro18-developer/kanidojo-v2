@@ -1,0 +1,11 @@
+node_modules/
+dist/
+windows/*.exe
+windows/*.zip
+windows/*.blockmap
+linux/*.run
+linux/*.tar.gz
+voice-samples/asr/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KaniDojo v2 — Offline Japanese SRS</title>
+<meta name="description" content="KaniDojo v2 is an offline Japanese SRS with 10,353 items, 8,155 bundled readings, one consistent voice, local progress, and Windows, Linux, and standalone builds.">
+<meta name="theme-color" content="#6d4aff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%236d4aff'/%3E%3Cstop offset='1' stop-color='%23ff4f8b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='serif' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3E力%3C/text%3E%3C/svg%3E">
+<style>
+:root{--ink:#211a38;--ink2:#3c3357;--muted:#716a84;--line:#e6e0f3;--bg:#fbf9ff;--primary:#6d4aff;--pink:#ff4f8b;--teal:#0db5a6;--lav:#eee9ff;--font:"Segoe UI","Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.55 var(--font);background:radial-gradient(1000px 700px at 5% -5%,rgba(216,201,255,.8),transparent 60%),radial-gradient(850px 600px at 100% 0%,rgba(255,213,231,.6),transparent 60%),linear-gradient(180deg,#fcfaff,var(--bg) 45%,#f6f1ff);overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}h1,h2,h3,p{margin-top:0}h1,h2,h3{text-wrap:balance}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.mono{font-family:"Cascadia Code","SFMono-Regular",Consolas,monospace}
+header{position:sticky;top:0;z-index:20;background:rgba(252,250,255,.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(230,224,243,.8)}.nav{display:flex;align-items:center;gap:28px;height:76px}.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:850;letter-spacing:-.04em}.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--primary),#8a4cff 58%,var(--pink));color:#fff;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:24px;box-shadow:0 12px 22px -12px rgba(109,74,255,.9)}.links{display:flex;align-items:center;gap:25px;margin-left:auto;color:var(--ink2);font-size:14px;font-weight:650}.links a:hover{color:var(--primary)}.top-btn{padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:750}.top-btn:hover{background:var(--primary)}
+.hero{padding:68px 0 28px;position:relative}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#5334e8;font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px rgba(255,79,139,.12)}h1{font-size:clamp(3rem,5.8vw,5.6rem);line-height:.94;letter-spacing:-.06em;margin:19px 0 22px;max-width:720px}.grad{background:linear-gradient(100deg,var(--primary),#a34cff 50%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.lede{max-width:600px;color:var(--muted);font-size:19px;line-height:1.7;margin-bottom:28px}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 22px;font-weight:750;font-size:15px;transition:transform .2s,box-shadow .2s}.button:hover{transform:translateY(-1px)}.primary{background:linear-gradient(135deg,var(--primary),#8a4cff 56%,var(--pink));color:#fff;box-shadow:0 18px 36px -18px rgba(109,74,255,.82)}.ghost{border:1px solid var(--line);background:rgba(255,255,255,.7);color:var(--ink)}.notes{display:flex;flex-wrap:wrap;gap:18px;margin:20px 0 0;padding:0;list-style:none;color:var(--muted);font-size:13px;font-weight:650}.notes li{display:flex;gap:7px;align-items:center}.check{width:16px;height:16px;border-radius:50%;background:rgba(13,181,166,.12);position:relative}.check:after{content:"";position:absolute;left:5px;top:3px;width:4px;height:7px;border:solid var(--teal);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.visual{position:relative}.browser{border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 35px 80px -45px rgba(49,31,111,.6);overflow:hidden;transform:rotate(1.4deg)}.browser-bar{height:31px;display:flex;align-items:center;gap:5px;padding:0 12px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fdfbff,#f7f3ff)}.browser-bar i{width:7px;height:7px;border-radius:50%;background:#d8d0ea}.browser-bar i:first-child{background:#ffb5cb}.browser-bar i:nth-child(2){background:#ffe0a8}.browser-bar i:nth-child(3){background:#b9f0e7}.browser-bar span{margin:auto;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:9px;transform:translateX(-8px)}.browser img{width:100%;height:auto}.float{position:absolute;right:-10px;top:-22px;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.96);box-shadow:0 18px 40px -24px rgba(49,31,111,.55)}.float small{display:block;color:var(--muted);font-size:10px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.float strong{display:block;margin-top:3px;font-size:17px;letter-spacing:-.03em}.float em{display:block;color:var(--muted);font-size:11px;font-style:normal;margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:42px 0 0;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.7);box-shadow:0 18px 50px -38px rgba(49,31,111,.42);overflow:hidden}.stat{padding:20px 24px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:29px;letter-spacing:-.045em;margin-bottom:3px}.stat span{display:block;color:var(--muted);font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+.section{padding:86px 0;scroll-margin-top:90px}.head{max-width:760px;margin-bottom:34px}.head .eyebrow{font-size:11px}.head h2{font-size:clamp(2.3rem,4vw,3.8rem);line-height:1.04;letter-spacing:-.05em;margin:13px 0 15px}.head p{color:var(--muted);font-size:17px;line-height:1.7;margin:0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.78);box-shadow:0 18px 50px -42px rgba(49,31,111,.42)}.card .icon{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--lav);color:var(--primary);font-size:18px;font-weight:900;margin-bottom:16px}.card h3{font-size:20px;letter-spacing:-.035em;line-height:1.2;margin-bottom:8px}.card p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+.downloads{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.download{display:grid;grid-template-columns:52px 1fr auto;gap:15px;align-items:center;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 18px 50px -44px rgba(49,31,111,.4);transition:border-color .2s,transform .2s}.download:hover{border-color:#cfc2ff;transform:translateY(-2px)}.download .glyph{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--lav);color:var(--primary);font-weight:900}.download strong{display:block;font-size:17px}.download small{display:block;color:var(--muted);font-size:12px;margin-top:2px}.download .arrow{color:var(--primary);font-size:20px;font-weight:800}.webapp{grid-column:span 2;background:linear-gradient(120deg,#211a38,#3b2474 60%,#6c2b7b);color:#fff;border-color:transparent}.webapp .glyph{background:rgba(255,255,255,.12);color:#fff}.webapp small{color:rgba(255,255,255,.65)}.webapp .arrow{color:#fff}.webapp:hover{border-color:transparent}
+.split{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}.shot{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 30px 70px -46px rgba(49,31,111,.58);transform:rotate(-1deg)}.shot img{width:100%;height:auto;object-fit:contain}.copy p{color:var(--muted);font-size:16px;line-height:1.75}.copy p + p{margin-top:14px}.copy strong{color:var(--ink)}.license{display:grid;gap:10px;margin:23px 0 0;padding:0;list-style:none}.license li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:14px;line-height:1.55}.license b{color:var(--ink)}.bulb{width:9px;height:9px;flex:0 0 auto;margin-top:5px;border-radius:50%;background:var(--pink)}
+.beta{position:relative;overflow:hidden;padding:50px;border-radius:28px;background:linear-gradient(120deg,#211a38,#3b1f77 52%,#7d2e9c);color:#fff}.beta:before{content:"力";position:absolute;right:12px;bottom:-110px;font-family:"Yu Mincho",serif;font-size:340px;line-height:1;color:rgba(255,255,255,.06)}.beta>*{position:relative;z-index:1}.beta .eyebrow{color:#cdbdff}.beta h2{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1;letter-spacing:-.055em;margin:13px 0 14px}.beta p{max-width:650px;color:rgba(255,255,255,.78);font-size:17px;line-height:1.7;margin-bottom:22px}.beta .button{background:#fff;color:var(--ink);box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}.beta .ghost{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;margin-left:8px}
+.setup{display:none;margin-bottom:18px;padding:12px 15px;border:1px solid #f3c8d4;border-radius:12px;background:#fff0f5;color:#8f2145;font-size:13px;line-height:1.5}.setup.show{display:block}
+footer{padding:30px 0 55px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}.foot-brand{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:850}.foot-brand .mark{width:33px;height:33px;border-radius:10px;font-size:18px}.foot p{max-width:700px;margin:0;line-height:1.7;text-align:right}.foot a{color:var(--primary);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1020px){.hero-grid{grid-template-columns:1fr;gap:42px}.visual{max-width:760px;margin:auto}.cards{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}.shot{max-width:720px}.links{display:none}}
+@media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{height:66px}.hero{padding-top:38px}h1{font-size:clamp(2.7rem,13vw,4rem)}.lede{font-size:17px}.actions .button{width:100%}.stats{grid-template-columns:repeat(2,1fr);margin-top:32px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.section{padding:64px 0}.cards,.downloads{grid-template-columns:1fr}.webapp{grid-column:auto}.download{grid-template-columns:46px 1fr auto}.beta{padding:34px 24px;border-radius:22px}.beta .ghost{margin:10px 0 0}.foot{flex-direction:column}.foot p{text-align:left}.float{right:4px;top:-16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./"><span class="mark">力</span>KaniDojo</a>
+    <nav class="links" aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#data">Data</a>
+      <a data-repo href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+    <a class="top-btn" data-download="KaniDojo-Setup-2.0.0.exe" href="#download">Download</a>
+  </div>
+</header>
+<main>
+  <section class="hero wrap">
+    <div id="setupNote" class="setup">Set <span class="mono">docs/config.js</span> to your GitHub username and repository before publishing this page.</div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>KaniDojo v2 · beta</span>
+        <h1>Japanese SRS that lives <span class="grad">on your machine.</span></h1>
+        <p class="lede">10,353 kanji and vocabulary items. 8,155 bundled readings. One consistent voice. Lessons, reviews, JLPT study, and local progress with no account and no server.</p>
+        <div class="actions">
+          <a class="button primary" data-download="KaniDojo-Setup-2.0.0.exe" href="#download">Download for Windows</a>
+          <a class="button ghost" href="./KaniDojo-v2.html">Launch in browser</a>
+        </div>
+        <ul class="notes">
+          <li><span class="check"></span>No account</li>
+          <li><span class="check"></span>No analytics</li>
+          <li><span class="check"></span>No runtime TTS</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span>kanidojo</span></div>
+          <img src="assets/hero.webp" width="1440" height="1000" alt="KaniDojo dashboard with reviews, SRS garden, and upcoming reviews">
+        </div>
+        <div class="float"><small>Reading voice</small><strong>Izanami</strong><em>one voice · 8,155 clips</em></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>10,353</strong><span>Study items</span></div>
+      <div class="stat"><strong>8,155</strong><span>Audio clips</span></div>
+      <div class="stat"><strong>60</strong><span>Levels</span></div>
+      <div class="stat"><strong>0</strong><span>Servers</span></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="features">
+    <div class="head">
+      <span class="eyebrow">Built for the long haul</span>
+      <h2>Small enough to keep. Complete enough to use.</h2>
+      <p>A focused SRS with the things that matter: a clear review queue, level progression, JLPT tracks, local data, and audio that works without a browser voice.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">音</div><h3>One voice. Every reading.</h3><p>All 8,155 kana readings use the same Deepgram Aura-2 Izanami voice, bundled as Opus. No random voice changes.</p></article>
+      <article class="card"><div class="icon">離</div><h3>Offline by design.</h3><p>The app, curriculum, and audio are local. No network calls, no account, and no browser text-to-speech dependency.</p></article>
+      <article class="card"><div class="icon">階</div><h3>Levels and JLPT.</h3><p>Climb 60 frequency-based levels or switch to JLPT N5–N1. Your learned items and SRS stages stay intact.</p></article>
+      <article class="card"><div class="icon">箱</div><h3>Portable everywhere.</h3><p>Windows installer, portable ZIP, Linux self-extracting runner, and a standalone HTML build with every clip embedded.</p></article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="download">
+    <div class="head">
+      <span class="eyebrow">Pick your package</span>
+      <h2>Download KaniDojo v2.</h2>
+      <p>All builds include the complete curriculum and the single-voice audio pack. The standalone HTML is the everything-in-one option.</p>
+    </div>
+    <div class="downloads">
+      <a class="download" data-download="KaniDojo-Setup-2.0.0.exe" href="#">
+        <span class="glyph">⊞</span><span><strong>Windows installer</strong><small>139 MB · Start Menu and desktop shortcuts</small></span><span class="arrow">↓</span>
+      </a>
+      <a class="download" data-download="KaniDojo-2.0.0-win-x64-portable.zip" href="#">
+        <span class="glyph">▣</span><span><strong>Windows portable ZIP</strong><small>180 MB · Extract once, then run</small></span><span class="arrow">↓</span>
+      </a>
+      <a class="download" data-download="KaniDojo-2.0.0-linux-x64.run" href="#">
+        <span class="glyph">⌘</span><span><strong>Linux single file</strong><small>140 MB · Self-extracting runner</small></span><span class="arrow">↓</span>
+      </a>
+      <a class="download" data-download="KaniDojo-v2.html" href="#">
+        <span class="glyph">◇</span><span><strong>Standalone HTML</strong><small>39.7 MB · All audio embedded</small></span><span class="arrow">↓</span>
+      </a>
+      <a class="download webapp" href="./KaniDojo-v2.html">
+        <span class="glyph">力</span><span><strong>Launch the web app</strong><small>Runs entirely in this browser tab. No install.</small></span><span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section wrap" id="data">
+    <div class="split">
+      <div class="shot"><img src="assets/detail.webp" width="1440" height="1000" alt="KaniDojo item detail with readings, example sentence, furigana, and translation"></div>
+      <div class="copy">
+        <span class="eyebrow">Open data, clear credits</span>
+        <h2 style="font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.04;letter-spacing:-.05em;margin:13px 0 15px">The curriculum is yours to inspect.</h2>
+        <p><strong>OpenJLPT</strong> provides the vocabulary, readings, meanings, and JLPT levels under <strong>CC BY-SA 4.0</strong>. The 60-level frequency order is generated from kanji frequency data, and the adapted curriculum is shared under the same license.</p>
+        <p>Example sentences come from <strong>Tatoeba</strong> under <strong>CC BY 2.0 FR</strong>. Each linked example points back to its source. Reading audio is generated with <strong>Deepgram Aura-2</strong> and is disclosed as AI-generated.</p>
+        <ul class="license">
+          <li><span class="bulb"></span><span><b>No key included.</b> The app does not call an API at runtime.</span></li>
+          <li><span class="bulb"></span><span><b>One voice pack.</b> No alternate voices are bundled.</span></li>
+          <li><span class="bulb"></span><span><b>Local progress.</b> Export a JSON backup from Settings at any time.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-bottom:86px">
+    <div class="beta">
+      <span class="eyebrow">A small independent project</span>
+      <h2>Beta software, built carefully.</h2>
+      <p>KaniDojo is free, independent, and not affiliated with OpenJLPT, Tatoeba, Deepgram, or any paid SRS. If it helps your study, share it with someone.</p>
+      <a class="button" data-repo href="https://github.com/" target="_blank" rel="noreferrer">View source</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand"><span class="mark">力</span>KaniDojo v2</div>
+    <p>Curriculum: <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noreferrer">OpenJLPT</a> (CC BY-SA 4.0). Examples: <a href="https://tatoeba.org/" target="_blank" rel="noreferrer">Tatoeba</a> (CC BY 2.0 FR). Reading voice: Deepgram Aura-2, AI-generated. <a data-repo href="https://github.com/" target="_blank" rel="noreferrer">Source on GitHub</a>.</p>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script>
+(() => {
+  const cfg = window.KANIDOJO_CONFIG || {};
+  const host = location.hostname;
+  const pagesUser = host.endsWith(".github.io") ? host.split(".")[0] : "";
+  const pathRepo = location.pathname.split("/").filter(Boolean)[0] || "kanidojo-v2";
+  let repo = cfg.repo || "YOUR_USERNAME/kanidojo-v2";
+  if (repo.includes("YOUR_USERNAME") && pagesUser) repo = `${pagesUser}/${pathRepo}`;
+  const repoUrl = `https://github.com/${repo}`;
+  const release = `${repoUrl}/releases/latest/download`;
+  const configured = !repo.includes("YOUR_USERNAME");
+  document.querySelectorAll("[data-repo]").forEach((el) => { el.href = repoUrl; });
+  document.querySelectorAll("[data-download]").forEach((el) => { el.href = `${release}/${el.dataset.download}`; });
+  let sponsor = cfg.sponsor || "";
+  if ((!sponsor || sponsor.includes("YOUR_USERNAME")) && pagesUser) sponsor = `https://github.com/sponsors/${pagesUser}`;
+  document.querySelectorAll("[data-sponsor]").forEach((el) => {
+    if (sponsor && !sponsor.includes("YOUR_USERNAME")) el.href = sponsor;
+    else el.style.display = "none";
+  });
+  if (!configured) document.getElementById("setupNote").classList.add("show");
+})();
+</script>
+</body>
+</html>
