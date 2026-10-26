@@ -3,6 +3,7 @@
 KaniDojo is an offline Japanese SRS with 10,353 kanji and vocabulary items and audio for every reading.
 
 **Live site:** https://rafdro18-developer.github.io/kanidojo-v2/  
+**Open the app in your browser:** https://rafdro18-developer.github.io/kanidojo-v2/KaniDojo-v2.html  
 **Release:** https://github.com/rafdro18-developer/kanidojo-v2/releases/tag/v2.0.0
 
 ![KaniDojo v2 item detail](screenshots/desktop-detail.png)
@@ -32,6 +33,7 @@ The name comes from kanji feeling like a crab biting my behind sometimes.
 | Linux single file | [KaniDojo-2.0.0-linux-x64.run](https://github.com/rafdro18-developer/kanidojo-v2/releases/latest/download/KaniDojo-2.0.0-linux-x64.run) | 140 MB |
 | Linux archive | [KaniDojo-2.0.0-linux-x64.tar.gz](https://github.com/rafdro18-developer/kanidojo-v2/releases/latest/download/KaniDojo-2.0.0-linux-x64.tar.gz) | 140 MB |
 | Standalone HTML | [KaniDojo-v2.html](https://github.com/rafdro18-developer/kanidojo-v2/releases/latest/download/KaniDojo-v2.html) | 39.7 MB |
+| Browser | [Launch in browser](https://rafdro18-developer.github.io/kanidojo-v2/KaniDojo-v2.html) | No install |
 
 The standalone file contains the app and all audio in one HTML file. The Windows and Linux installers are unsigned, so SmartScreen may warn on Windows.
 
@@ -58,7 +60,7 @@ Example sentence audio is intentionally not included. The sentence text, furigan
 
 - **Windows:** run the installer, or extract the portable ZIP and launch `KaniDojo.exe`.
 - **Linux:** `chmod +x KaniDojo-2.0.0-linux-x64.run && ./KaniDojo-2.0.0-linux-x64.run`
-- **Browser:** open `KaniDojo-v2.html`.
+- **Browser:** [launch the app](https://rafdro18-developer.github.io/kanidojo-v2/KaniDojo-v2.html), or open `KaniDojo-v2.html` locally.
 - **Android/macOS:** use the standalone HTML in a modern browser.
 
 The app starts with a small splash window and stores progress locally.
