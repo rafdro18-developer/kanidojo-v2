@@ -7,6 +7,24 @@ KaniDojo is an offline Japanese SRS with 10,353 kanji and vocabulary items and a
 
 ![KaniDojo v2 item detail](screenshots/desktop-detail.png)
 
+## About KaniDojo
+
+KaniDojo is a solo beta project made because I was tired of subscriptions. It is a Japanese SRS with no account, no server, and no tracking. Download it, open it, and study.
+
+The name comes from kanji feeling like a crab biting my behind sometimes.
+
+The original no-audio single-file build was about 4 MB. v2 is 39.7 MB because it includes 8,155 bundled reading clips.
+
+## First run
+
+- Leave the pace on **Standard** for normal study. **Demo pace** is only for quickly testing and burning items.
+- The placement test covers 20 kanji and can skip up to Level 20. I do not recommend it unless you already know the early material.
+- **Kana-only vocabulary** is included by default. You can skip it in Settings, but it is useful.
+- The default daily review goal is 20. You can raise it or cap reviews in Settings.
+- Standard intervals run from 4 hours to 4 months; an item burns after roughly 6 months.
+- Use **Demo pace** only if you want to see the SRS cycle quickly.
+- Export a JSON backup from Settings before clearing browser data or using a private window.
+
 ## Download
 
 | Build | Download | Size |
@@ -29,6 +47,10 @@ The standalone file contains the app and all audio in one HTML file. The Windows
 - Japanese example sentences with furigana and English translations
 - Tatoeba source links
 - Lessons, reviews, extra study, browse, heatmap, and JSON backup/import
+- Placement test, kana-word skipping, review goals, and review caps
+- Vacation mode, make-reviews-due, undo mistakes, and unburn
+- Furigana, romaji, dark mode, and six UI sizes
+- Hiragana/katakana chart in Instructions
 - Local progress storage
 - No account, analytics, server, or runtime text-to-speech
 
@@ -39,17 +61,20 @@ Example sentence audio is intentionally not included. The sentence text, furigan
 - **Windows:** run the installer, or extract the portable ZIP and launch `KaniDojo.exe`.
 - **Linux:** `chmod +x KaniDojo-2.0.0-linux-x64.run && ./KaniDojo-2.0.0-linux-x64.run`
 - **Browser:** open `KaniDojo-v2.html`.
+- **Android/macOS:** use the standalone HTML in a modern browser.
 
 The app starts with a small splash window and stores progress locally.
 
-## Progress and data
+## Progress warning
+
+Progress is stored in your browser or desktop app data. It will be lost if you use a private window, clear cookies, or delete app data.
 
 - Windows: `%APPDATA%\KaniDojo\Local Storage\leveldb`
 - Linux: `${XDG_CONFIG_HOME:-~/.config}/KaniDojo/Local Storage/leveldb`
 - Standalone HTML: the browser profile's localStorage
 - Storage key: `kanidojo_state_v1`
 
-Use **Settings → Data & settings** to export or import a JSON backup.
+Use **Settings → Data & settings** to export or import a JSON backup. Do this regularly.
 
 Reset all levels works as many times as you want. It clears lessons, reviews, stats, streak, and settings and returns to the welcome screen. Resetting one device does not reset another.
 
@@ -72,6 +97,12 @@ Reset all levels works as many times as you want. It clears lessons, reviews, st
 - No API key is included in this repository
 
 The code license is not set. Add a license before distributing the source. The curriculum data must remain under CC BY-SA 4.0.
+
+## Beta feedback
+
+KaniDojo is an unofficial solo beta project. I would especially appreciate corrections on readings, example sentences, onboarding, and anything confusing during first use.
+
+KaniDojo is not affiliated with WaniKani, Tofugu, OpenJLPT, Tatoeba, or Deepgram.
 
 ## Known limitations
 
