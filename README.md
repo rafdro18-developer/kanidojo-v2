@@ -69,6 +69,8 @@ Example sentence audio is intentionally not included. The sentence text, furigan
 </tr>
 </table>
 
+[Full dashboard](screenshots/dashboard.webp) · [Settings screen](screenshots/settings.webp)
+
 ## Run
 
 - **Windows:** run the installer, or extract the portable ZIP and launch `KaniDojo.exe`.
