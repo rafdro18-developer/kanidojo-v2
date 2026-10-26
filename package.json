@@ -5,7 +5,7 @@
   "productName": "KaniDojo",
   "main": "electron-main.cjs",
   "author": "KaniDojo",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "dist:win": "electron-builder --win nsis",

@@ -96,7 +96,7 @@ Reset all levels works as many times as you want. It clears lessons, reviews, st
 - Reading audio: Deepgram Aura-2, AI-generated
 - No API key is included in this repository
 
-The code license is not set. Add a license before distributing the source. The curriculum data must remain under CC BY-SA 4.0.
+The source code is **MIT licensed** (see `LICENSE`). The curriculum remains CC BY-SA 4.0, Tatoeba sentences remain CC BY 2.0 FR, and the Deepgram-generated audio is subject to Deepgram terms. See `NOTICE.md` for the split.
 
 ## Beta feedback
 
