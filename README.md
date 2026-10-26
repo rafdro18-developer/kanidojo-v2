@@ -113,9 +113,11 @@ Reset all levels works as many times as you want. It clears lessons, reviews, st
 
 The source code is **MIT licensed** (see `LICENSE`). The curriculum remains CC BY-SA 4.0, Tatoeba sentences remain CC BY 2.0 FR, and the Deepgram-generated audio is subject to Deepgram terms. See `NOTICE.md` for the split.
 
-## Beta feedback
+## Beta feedback and testing
 
-KaniDojo is an unofficial solo beta project. I would especially appreciate corrections on readings, example sentences, onboarding, and anything confusing during first use.
+KaniDojo is an unofficial solo beta project. I welcome testing for errors and would especially appreciate corrections on readings, example sentences, onboarding, SRS behavior, missing or broken audio, and platform-specific issues.
+
+If you find a problem, please include the item or level, what happened, and what you expected. You can [open an issue](https://github.com/rafdro18-developer/kanidojo-v2/issues) or leave a comment on the feedback thread.
 
 KaniDojo is not affiliated with WaniKani, Tofugu, OpenJLPT, Tatoeba, or Deepgram.
 
